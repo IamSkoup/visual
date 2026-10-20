@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172521">
+  <meta name="description" content="Неофициальная интерактивная хроника Хранителей Льва в Капани.">
+  <title>Хранители Льва: Капани — Протокол неизвестного происхождения</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Literata:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <section id="title-screen" class="title-screen">
+      <div class="title-art" aria-hidden="true"><div class="sun-disc"></div><div class="title-land"></div><div class="title-fence"></div><div class="title-bench"></div><div class="title-ball">◉</div></div>
+      <div class="title-copy"><p class="eyebrow">НЕОФИЦИАЛЬНАЯ ФАНАТСКАЯ ИСТОРИЯ · 6 ГЛАВ</p><h1>Хранители<br><em>Льва: Капани</em></h1><p class="subtitle">Протокол неизвестного происхождения</p><p class="title-lede">Обычный обход. Один сбой пространства. Двор, где даже хаос заполняет журнал посещений.</p>
+        <nav class="main-menu" aria-label="Главное меню">
+          <button class="menu-button primary" data-action="new">Новая игра <span>01</span></button>
+          <button class="menu-button" data-action="continue">Продолжить <span id="continue-label">—</span></button>
+          <button class="menu-button" data-action="chapters">Главы <span>06</span></button>
+          <button class="menu-button" data-action="gallery">Досье <span>▤</span></button>
+          <button class="menu-button" data-action="settings">Настройки <span>⚙</span></button>
+          <button class="menu-button" data-action="credits">Титры <span>↗</span></button>
+        </nav><p class="title-foot">ИСТОРИЯ · СЛУЖЕБНОЕ ДЕЛО № 14:37-К</p>
+      </div>
+      <div class="title-stamp">АРХИВ<br>ОТКРЫТ</div>
+    </section>
+    <section id="game-screen" class="game-screen hidden" aria-label="Игра">
+      <header class="game-topbar"><button class="icon-button" data-action="menu" aria-label="В главное меню">←</button><div class="chapter-heading"><span id="chapter-kicker">ПРОЛОГ</span><strong id="chapter-title">Порядок Земель Прайда</strong></div><div class="top-actions"><button class="icon-button" data-action="journal" aria-label="Оперативная сводка">▤</button><button class="icon-button" data-action="history" aria-label="История диалогов">◷</button><button class="icon-button" data-action="save" aria-label="Сохранить">↓</button><button class="icon-button" data-action="settings" aria-label="Настройки">⚙</button></div></header>
+      <div class="stage" id="stage"><div id="backdrop" class="backdrop"><div class="scene-grain"></div><div class="scene-label" id="scene-label">Земли Прайда · патруль</div><div id="scene-art" class="scene-art"></div><div id="sprites" class="sprites"></div><div class="vignette"></div></div>
+        <div class="chapter-progress" id="chapter-progress"></div><button class="hide-ui" data-action="hide-ui" aria-label="Скрыть интерфейс">⌗</button>
+        <article class="dialogue" id="dialogue"><header><span class="speaker-mark"></span><div><p class="speaker-label">СЛУЖЕБНОЕ НАБЛЮДЕНИЕ</p><h2 id="speaker">Хроникёр</h2></div><span id="scene-time" class="scene-time">14:37</span></header><p id="dialogue-text" class="dialogue-text"></p><div id="choices" class="choices"></div><footer><span id="dialogue-hint">Пробел · далее</span><button id="next-button" class="next-button" data-action="next" aria-label="Далее">↓</button></footer></article>
+      </div>
+      <footer class="statusbar"><div class="status-brand"><span class="seal">К</span> КАПАНИ <small>ОПЕРАТИВНАЯ ХРОНИКА</small></div><div id="route-tag" class="route-tag">МАРШРУТ: НЕ ОПРЕДЕЛЁН</div><div class="status-controls"><button data-action="auto" id="auto-button">АВТО</button><button data-action="skip" id="skip-button">ПРОПУСК</button><button data-action="sound" id="sound-button">ЗВУК: ВЫКЛ</button></div></footer>
+    </section>
+    <div id="modal-root" aria-live="polite"></div>
+  </main>
+  <script src="game.js" defer></script>
+</body>
+</html>
